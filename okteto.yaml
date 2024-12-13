@@ -3,6 +3,7 @@ deploy:
   commands:
     - name: deploy application
       command: |
+        env
         echo "hello world: ${HELLO_WORLD_IMAGE_REPOSITORY}:${HELLO_WORLD_IMAGE_TAG}"
         echo "hola mundo: ${HOLA_MUNDO_IMAGE_REPOSITORY}:${HOLA_MUNDO_IMAGE_TAG}"
         helm upgrade --install hello-world ./hello-world \
